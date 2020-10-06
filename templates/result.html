@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  <link href={{ url_for('static', filename='css/scrapper.css') }} rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <button type="button" onclick="location.href='/download?job={{job}}'">DOWNLOAD {{job}}.csv FILE</button>
+  </header>  
+  <main>
+    {% for site in sites %}
+    <div class="sites">
+      <h2>{{site}}</h2>
+      <div class="job_box">
+        <ul>
+          {% for job in result[site] %}
+            <li>
+              <div class="info">
+                <h4>{{job.title}}</h4>
+                <p>{{job.company}} | {{job.location}}</p>
+              </div>
+              <button type="button" onclick="window.open({{job.url}})">APPLY</button>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+  </main>
+</body>
+
+</html>

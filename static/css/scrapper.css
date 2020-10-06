@@ -1,0 +1,50 @@
+header{
+  padding:0;
+}
+
+main{
+  width:70%;
+  margin:0 auto;
+  text-align:center;
+}
+
+form{
+  max-width:100%;
+  margin:0 auto;
+  text-align:center;
+}
+
+input{
+  margin:0 auto;
+  text-align:center;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+li{
+  height:fit-content;
+  font-size:1.0em;
+  display:flex;
+  justify-content: space-between;
+}
+
+li>button{
+}
+
+.job_box{
+  text-align:left;
+  width:600px;
+  margin:0 auto;
+  max-height:440px;
+  overflow:auto;
+  margin-bottom:100px;
+  border:3px solid
+}
+
+.info{
+  margin-left:5px;
+}
